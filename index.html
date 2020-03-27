@@ -1328,10 +1328,9 @@
                 src="{{img}}">
 
                 <div
-                  class = "close-gallery-button">
                   <button
-                    on="tap:AMP.setState({itemsSrc: itemsSrc.filter(a => a.id != {{id}})})"
-                    class="ampstart-btn caps m2 close-gallery-button">X
+                    on="tap:AMP.setState({itemsSrc: itemsSrc.filter(a => a.id != {{id}})}),item-list.refresh"
+                    class="close-gallery-button">X
                   </button>
                 </div>
 
