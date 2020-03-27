@@ -993,7 +993,6 @@
                   on="tap:gallery-lightbox"
                   role="button"
                   tabindex="0">
-
                 </amp-img>
 
               </div>
@@ -1015,7 +1014,6 @@
                   on="tap:gallery-lightbox"
                   role="button"
                   tabindex="0">
-
                 </amp-img>
 
               </div>
@@ -1037,7 +1035,6 @@
 		  on="tap:gallery-lightbox"
 		  role="button"
 		  tabindex="0">
-
 	        </amp-img>
 
               </div>
@@ -1058,7 +1055,6 @@
 		  on="tap:gallery-lightbox"
 		  role="button"
 		  tabindex="0">
-
 	        </amp-img>
 
               </div>
@@ -1079,7 +1075,6 @@
 	          on="tap:gallery-lightbox"
 	          role="button"
 	          tabindex="0">
-
 	        </amp-img>
 
               </div>
@@ -1120,7 +1115,6 @@
 		  on="tap:gallery-lightbox"
 		  role="button"
 		  tabindex="1">
-
 	        </amp-img>
 
               </div>
@@ -1141,7 +1135,6 @@
 	          on="tap:gallery-lightbox"
 	          role="button"
 	          tabindex="1">
-
 	        </amp-img>
 
               </div>
@@ -1162,7 +1155,6 @@
                   on="tap:gallery-lightbox"
                   role="button"
                   tabindex="1">
-
                 </amp-img>
 
               </div>
@@ -1327,7 +1319,16 @@
                 aria-describedby = "caption"
                 alt="{{cantidad}}"
                 src="{{img}}">
-  
+
+                <button 
+                  on="tap:AMP.setState( { product: { selectedCargas: product.selectedCargas + 1}, itemsSrc: itemsSrc.map( img: product[product.selectedColor].imagenes[11]) } ),item-list.refresh "
+                  class="ampstart-btn caps m2 close-gallery-button">Anular
+                </button>
+
+
+
+
+                <!--
                 <form method   = "POST"
                   class = "close-gallery-button"
                   action-xhr = "https://cornavi.herokuapp.com/api/v1/electrico/circuitos/{{id}}/dropFromCircuito.json"
@@ -1339,7 +1340,10 @@
                     value = "CLIENT_ID(uid)" 
                     data-amp-replace = "CLIENT_ID">
                   <button  type = "submit" >X</button>
+
                 </form>
+                -->
+
               </amp-img>
 
             </template>
