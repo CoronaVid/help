@@ -941,7 +941,7 @@
 	        role="button"
 		tabindex="0">
 		<button 
-		  on="tap:AMP.setState( { product: { selectedCargas: product.selectedCargas + 1}, itemsSrc: itemsSrc.concat([ { img: product[product.selectedColor].imagenes[0]}]) } ),item-list.refresh "
+		  on="tap:AMP.setState( { product: { selectedCargas: product.selectedCargas + 1}, itemsSrc: itemsSrc.concat([ objecto: { img: product[product.selectedColor].imagenes[0]}]) } ),item-list.refresh "
 		  class="ampstart-btn caps m2 close-gallery-button">Agrega
 		</button>
 
@@ -1320,13 +1320,13 @@
                 alt="{{cantidad}}"
                 src="{{img}}">
 
-                <button 
-                  on="itemsSrc.map( obj.img =>  product[product.selectedColor].imagenes[11] } )"
-                  class="ampstart-btn caps m2 close-gallery-button">Anular
-                </button>
-
-
-
+                <div
+                  class = "close-gallery-button">
+                  <button 
+                    on="itemsSrc.map( obj.img =>  product[product.selectedColor].imagenes[11] } )"
+                    class="ampstart-btn caps m2 close-gallery-button">X
+                  </button>
+                </div>
 
                 <!--
                 <form method   = "POST"
