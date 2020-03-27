@@ -922,7 +922,7 @@
           La información técnica actualizada sobre el Corona Virus COVID-19 la puede Ud. obtener en https://www.cdc.gov/spanish/.
         </p>
 
-        <section>
+        <section> <!-- Carruseles -->
           <div class="product-gallery">
 	    <amp-carousel id="blue-apple-carousel"
 	      width="1024"
@@ -1216,11 +1216,11 @@
                 </div>
               </div>
             </amp-image-lightbox>
+          </div> <!-- Carruseles -->
+        </section> <!--- Carruseles -->
 
-          </section>
+        <div> <!-- estados -->
 
-
-        <div>
           <amp-state id="presupuesto">
 	    <script type="application/json">
               {
@@ -1313,7 +1313,11 @@
             </script>
           </amp-state>
 
-        </div>
+        </div> <!-- estados -->
+
+        <!--
+          Carruseles 
+        -->
 
         <div class="product-gallery">
           <amp-list
@@ -1327,46 +1331,48 @@
 
             <template type="amp-mustache">
 
-            <amp-img width="100"
-              tabindex = 0
-              height="90"
-              layout="fixed"
-              aria-describedby = "caption"
-              alt="{{cantidad}}"
-              src="{{img}}">
+              <amp-img width="100"
+                tabindex = 0
+                height="90"
+                layout="fixed"
+                aria-describedby = "caption"
+                alt="{{cantidad}}"
+                src="{{img}}">
+  
+                <form method   = "POST"
+                  class = "close-gallery-button"
+                  action-xhr = "https://cornavi.herokuapp.com/api/v1/electrico/circuitos/{{id}}/dropFromCircuito.json"
+                  target    = "_top"
+                  on = "submit-success:carrusel-list.refresh,cart-list.refresh,ocupacion-list.refresh">
 
-              <form method   = "POST"
-                class = "close-gallery-button"
-                action-xhr = "https://cornavi.herokuapp.com/api/v1/electrico/circuitos/{{id}}/dropFromCircuito.json"
-                target    = "_top"
-                on = "submit-success:carrusel-list.refresh,cart-list.refresh,ocupacion-list.refresh">
+                  <input name = "clientId" 
+                    type = "hidden" 
+                    value = "CLIENT_ID(uid)" 
+                    data-amp-replace = "CLIENT_ID">
+                  <button  type = "submit" >X</button>
+                </form>
+              </amp-img>
 
-                <input name = "clientId" 
-                  type = "hidden" 
-                  value = "CLIENT_ID(uid)" 
-                  data-amp-replace = "CLIENT_ID">
-                <button  type = "submit" >X</button>
-              </form>
-            </amp-img>
-          </template>
+            </template>
 
-          <div overflow
-            class = "list-overflow">
-            VER MAS
-          </div>
-
-          <div fallback>
-            <div class = "content">
-              <button 
-                class="ampstart-btn ml1 caps"
-                on="tap:item-list.refresh"
-                type='submit'>Refrescar
-              </button>
+            <div overflow
+              class = "list-overflow">
+              VER MAS
             </div>
-          </div>
-        </amp-list>
-      </div>
-    </div>
+
+            <div fallback>
+              <div class = "content">
+                <button 
+                  class="ampstart-btn ml1 caps"
+                  on="tap:item-list.refresh"
+                  type='submit'>Refrescar
+                </button>
+              </div>
+            </div>
+          </amp-list>
+        </div> <!-- product-gallery -->
+
+      </div> <!-- ampstart-card m1 -->
 
 <!--
         <amp-install-serviceworker
@@ -1376,5 +1382,6 @@
         </amp-install-serviceworker>
     
 -->
+    </div> <!-- abe-preview -->
   </body>
 </html>
