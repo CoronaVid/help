@@ -75,7 +75,7 @@
     }
     </script>
 
-
+<!--
     <script id="amp-access" type="application/json">
     {
     "authorization": "https://cornavi.herokuapp.com/authenticate.json?rid=READER_ID&url=CANONICAL_URL&ref=DOCUMENT_REFERRER&_=RANDOM&clientId=CLIENT_ID(uid)",
@@ -95,7 +95,7 @@
     }
     }
     </script>
-
+-->
 
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
     <meta charset='utf-8'>
@@ -1270,10 +1270,10 @@
                    "5" : "Tos Seca.",
                    "6" : "Fiebre.",
                    "7" : "Falta de Aire.",
-                     "8" : "Hipertensión Arterial.",
-                     "9" : "Diabetes.",
-                     "10": "Asma.",
-                     "11": "CardioPatía."
+                   "8" : "Hipertensión Arterial.",
+                   "9" : "Diabetes.",
+                   "10": "Asma.",
+                   "11": "CardioPatía."
                  },
                  "imagenes": {
                    "0" : "https://help.coronavid.cl/img/sintomas/secreciones_nasales_01.jpg",
@@ -1300,6 +1300,7 @@
              ]
             </script>
           </amp-state>
+
         </div>
 
         <div class="product-gallery">
@@ -1354,5 +1355,14 @@
         </amp-list>
       </div>
     </div>
+
+<!--
+        <amp-install-serviceworker
+          src="/sw.js"
+          data-iframe-src="https://cornavi.herokuapp.com/sw.js"
+          layout="nodisplay">
+        </amp-install-serviceworker>
+    
+-->
   </body>
 </html>
