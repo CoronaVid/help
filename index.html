@@ -1329,8 +1329,8 @@
 
                 <div
                   class = "close-gallery-button">
-                  <button 
-                    on="AMP.setState(itemsSrc: { itemsSrc.filter(a => a.id == 1)}"
+                  <button
+                    on="tap:AMP.setState({itemsSrc: itemsSrc.filter(a => a.id == 1)})"
                     class="ampstart-btn caps m2 close-gallery-button">X
                   </button>
                 </div>
@@ -1381,36 +1381,6 @@
         </amp-install-serviceworker>
     
 -->
-<amp-state id="galleryItems">
- <script type="application/json">
-[ 
-        { 
-          "id":0,
-          "alt":"image-alt",
-          "src":"foobar.jpg",
-          "isVideo":false,
-          "isDefault":true,
-          "metal":"_r",
-          "ctw":"_0-70",
-          "width":"1200",
-          "height":"1200"
-        },
-        { 
-          "id":1,
-          "alt":"image-alt",
-          "src":"foobar.jpg",
-          "isVideo":false,
-          "isDefault":true,
-          "metal":"_y",
-          "ctw":"_0-70",
-          "width":"1200",
-          "height":"1200"
-        }
-  ]
-</script>
-</amp-state>
-
-
 
 <button on="tap:AMP.setState({ itemsSrc: itemsSrc.filter(a => a.id == '0')})">Rose Gold</button>
 
