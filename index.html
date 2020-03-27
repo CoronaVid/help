@@ -1203,6 +1203,58 @@
 	      </a>	
 	    </div>
 
+              <amp-image-lightbox 
+                  id="gallery-lightbox"
+                  layout="nodisplay">
+                 <!--
+                  <div
+                   id = "zoom"
+                   class = "clearfix" >
+                     <div 
+                       class = "left" >
+                       <div
+                          role="button"
+                          tabindex="0" >
+                          <form method   = "POST"
+                            action-xhr = "https://cornavi.herokuapp.com/api/v1/electrico/circuitos/deleteElectrodomestico.json"
+                              target    = "_top"
+                              on = "submit-success:carrusel-list.refresh,cart-list.refresh">
+                             <input name = "clientId" 
+                                 type = "hidden" 
+                                 value = "CLIENT_ID(uid)" 
+                                 data-amp-replace = "CLIENT_ID">
+                             <input 
+                             hidden
+                             name = "id" 
+                             [value] = "id" > 
+                             <button 
+                                class="ampstart-btn caps m2 borrar-gallery-button"
+                                type = "submit" > Borrar
+                             </button>
+                          </form>
+                        </div>
+                     </div>
+                     <div
+                       class = "right" >
+                        <div on="tap:gallery-lightbox.close"
+                          role="button"
+                          tabindex="0">
+                          <button class="ampstart-btn caps m2 close-gallery-button"
+                            on="tap:gallery-lightbox.close"
+                            role="button"
+                            tabindex="0">
+                            Cerrar
+                          </button>
+                        </div>
+                     </div>
+                  -->
+                    <div class = "right close-gallery-button" >
+
+
+
+
+
+
 	    <amp-state id="presupuesto">
 	      <script type="application/json">
                 {
