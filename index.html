@@ -1383,10 +1383,7 @@
 -->
 <amp-state id="galleryItems">
  <script type="application/json">
-{ 
-  "items":[ 
-    { 
-      "values":[ 
+[ 
         { 
           "id":0,
           "alt":"image-alt",
@@ -1409,15 +1406,13 @@
           "width":"1200",
           "height":"1200"
         }
-      ]
-    }
   ]
-}
 </script>
 </amp-state>
 
 
-<button on="tap:AMP.setState({ filteredProducts: { values : galleryItems.items[0].values.filter(a => a.metal == '_r')}})">Rose Gold</button>
+
+<button on="tap:AMP.setState({ filteredProducts: { values : galleryItems.filter(a => a.metal == '_r')}})">Rose Gold</button>
 
       </div> <!-- ampstart-card m1 -->
 
