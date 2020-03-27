@@ -1321,7 +1321,7 @@
                 src="{{img}}">
 
                 <button 
-                  on="tap:AMP.setState( { product: { selectedCargas: product.selectedCargas + 1}, itemsSrc: itemsSrc.map( img: product[product.selectedColor].imagenes[11]) } ),item-list.refresh "
+                  on="tap:AMP.setState( { product: { selectedCargas: product.selectedCargas + 1}, itemsSrc: itemsSrc.map( { img: product[product.selectedColor].imagenes[11] } ) } ),item-list.refresh "
                   class="ampstart-btn caps m2 close-gallery-button">Anular
                 </button>
 
